@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impact Training - O teu Ginásio em Chafé, Viana do Castelo. Treino Personalizado, Musculação, Aulas de Grupo e Muito Mais. Visita-nos em Caminho do Campo de Jogos Nº 327.">
+    <meta name="keywords" content="Ginásio Chafé, Ginásio Viana do Castelo, Impact Training, Musculação, Personal Trainer, Aulas Grupo, Fitness">
+    <meta name="author" content="Impact Training">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Impact Training | Ginásio em Chafé">
+    <meta property="og:description" content="Alcança a tua melhor versão. Treino personalizado, ambiente motivador e equipamentos de topo. Junta-te a nós!">
+    <meta property="og:image" content="https://www.instagram.com/impact.training_">
+    <meta property="og:url" content="https://impact-training.pt/">
+    <!-- ⚠️ EDITAR: Coloca o teu domínio final aqui -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon (Usa a tua foto de perfil como base) -->
+    <link rel="icon" href="https://www.instagram.com/impact.training_" sizes="any">
+    <link rel="apple-touch-icon" href="https://www.instagram.com/impact.training_">
+
+    <title>Impact Training | Ginásio em Chafé, Viana do Castelo</title>
+
+    <!-- Schema.org Structured Data para SEO Local -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "name": "Impact Training",
+            "image": "https://www.instagram.com/impact.training_",
+            "telephone": "+351-935-222-311",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Caminho do Campo de Jogos Nº 327",
+                "addressLocality": "Chafé",
+                "addressRegion": "Viana do Castelo",
+                "postalCode": "4935-581",
+                "addressCountry": "PT"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 41.6833,
+                "longitude": -8.8167
+            },
+            "url": "https://impact-training.pt/",
+            "sameAs": [
+                "https://www.instagram.com/impact.training_"
+            ],
+            "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "22:00"
+            }, {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+            }, {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "Closed",
+                "closes": "Closed"
+            }],
+            "priceRange": "€€"
+        }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+        ========================================= */
+        
+         :root {
+            --primary: #FFB800;
+            /* Amarelo Energia */
+            --primary-dark: #E6A600;
+            --bg-dark: #0A0A0A;
+            /* Preto Profundo */
+            --bg-card: #141414;
+            /* Cinza Cartão */
+            --bg-lighter: #1E1E1E;
+            /* Inputs/Bordas */
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --text-dark: #121212;
+            --font-title: 'Bebas Neue', cursive;
+            --font-body: 'Inter', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-glow: 0 0 20px rgba(255, 184, 0, 0.15);
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        section {
+            padding: 6rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* =========================================
+           TYPOGRAPHY
+        ========================================= */
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-title);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: var(--primary);
+            font-family: var(--font-title);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 70ch;
+        }
+        /* =========================================
+           BUTTONS
+        ========================================= */
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-title);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-dark);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--text-dark);
+        }
+        /* =========================================
+           HEADER / NAV
+        ========================================= */
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem 2rem;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            display: none;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-main);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        /* =========================================
+           HERO SECTION
+        ========================================= */
+        
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding-top: 80px;
+            background: radial-gradient(ellipse at center, #1a1a1a 0%, var(--bg-dark) 70%);
+        }
+        
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+        
+        .hero-logo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            margin: 0 auto 2rem;
+            box-shadow: 0 0 0 1px rgba(255, 184, 0, 0.3), var(--shadow-glow);
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+        
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 0 1px rgba(255, 184, 0, 0.3), 0 0 20px rgba(255, 184, 0, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 0 1px rgba(255, 184, 0, 0.5), 0 0 40px rgba(255, 184, 0, 0.3);
+            }
+        }
+        
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            opacity: 0.6;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+        /* =========================================
+           GENERAL SECTIONS
+        ========================================= */
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header p {
+            margin: 1rem auto 0;
+        }
+        /* =========================================
+           ABOUT
+        ========================================= */
+        
+        #about {
+            background: var(--bg-card);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-family: var(--font-title);
+            font-size: 3rem;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 2;
+            border: 2px solid #333;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .badge {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: var(--primary);
+            color: var(--text-dark);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-card);
+        }
+        /* =========================================
+           SERVICES / MODALIDADES
+        ========================================= */
+        
+        #services {
+            background: var(--bg-dark);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card), var(--shadow-glow);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 184, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: var(--text-dark);
+            transform: rotate(5deg) scale(1.1);
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        /* =========================================
+           SCHEDULE / HORÁRIOS
+        ========================================= */
+        
+        #schedule {
+            background: var(--bg-card);
+            border-top: 1px solid #222;
+        }
+        
+        .schedule-wrapper {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        th {
+            color: var(--primary);
+            font-family: var(--font-title);
+            letter-spacing: 1px;
+            font-weight: 400;
+            font-size: 1rem;
+            background: var(--bg-lighter);
+        }
+        
+        td {
+            color: var(--text-muted);
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover td {
+            color: var(--text-main);
+            background: rgba(255, 184, 0, 0.03);
+        }
+        
+        .day-cell {
+            font-weight: 600;
+            color: var(--text-main);
+            font-family: var(--font-title);
+            letter-spacing: 1px;
+        }
+        
+        .closed {
+            color: #ff4444;
+            font-weight: 500;
+        }
+        /* =========================================
+           CONTACT / MAP / FOOTER
+        ========================================= */
+        
+        #contact {
+            background: var(--bg-dark);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 184, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .info-text h4 {
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        
+        .info-text p,
+        .info-text a {
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .info-text a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(255, 184, 0, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            height: 100%;
+            min-height: 450px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(100%) invert(90%) contrast(80%);
+            transition: filter 0.3s;
+        }
+        
+        .map-container:hover iframe {
+            filter: none;
+        }
+        
+        footer {
+            background: #050505;
+            border-top: 1px solid #1a1a1a;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            letter-spacing: 3px;
+        }
+        
+        .footer-bottom {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        /* =========================================
+           WHATSAPP FLOAT
+        ========================================= */
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        .whatsapp-btn {
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            color: white;
+            font-size: 1.8rem;
+            transition: var(--transition);
+            animation: pulseWhats 2s infinite;
+        }
+        
+        @keyframes pulseWhats {
+            0% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+            }
+            100% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            background: #1ebd5a;
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-card);
+            border: 1px solid #333;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: var(--transition);
+            color: var(--text-main);
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+        
+        @media (max-width: 992px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .map-container {
+                min-height: 350px;
+            }
+            .stats {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--bg-card);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: var(--transition);
+                border-left: 1px solid #222;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            .nav-cta {
+                display: flex;
+            }
+            section {
+                padding: 4rem 1.5rem;
+            }
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                letter-spacing: 1px;
+            }
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+        /* Accessibility Focus */
+        
+        a:focus-visible,
+        button:focus-visible,
+        .btn:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================= -->
+    <header id="header">
+        <nav>
+            <a href="#hero" class="logo">IMPACT <span>TRAINING</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="active">Sobre</a></li>
+                <li><a href="#services">Modalidades</a></li>
+                <li><a href="#schedule">Horários</a></li>
+                <li><a href="#contact">Contactos</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://wa.me/351935222311" target="_blank" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =========================================
+             HERO SECTION
+        ========================================= -->
+        <section id="hero">
+            <div class="hero-content">
+                <!-- Foto de perfil do Instagram fornecida -->
+                <img src="image.png" alt="Logotipo Impact Training" class="hero-logo" loading="eager" fetchpriority="high">
+                <h1>Treina com Propósito.<br>Alcança o <span style="color: var(--primary);">Impacto</span> que Mereces.</h1>
+                <p class="hero-tagline">O teu ginásio de referência em Chafé, Viana do Castelo. Equipamento de topo, acompanhamento especializado e uma comunidade que te puxa para cima.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/351935222311" target="_blank" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.466-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.472.099-.174.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>                        Falar no WhatsApp
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Ver Localização</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </div>
+        </section>
+
+        <!-- =========================================
+             ABOUT SECTION
+        ========================================= -->
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-subtitle">Quem Somos</span>
+                        <h2>Mais que um Ginásio,<br>uma Comunidade de Resultados.</h2>
+                        <p>⚠️ EDITAR: Insere aqui a tua missão. Ex: "Na Impact Training, acreditamos que o treino deve ser acessível, eficaz e motivador. Fundado em [Ano], o nosso espaço em Chafé foi desenhado para receber desde o iniciante absoluto até
+                            ao atleta de competição, com zona de musculação, cardio, funcional e estúdio de aulas."</p>
+                        <p>O nosso foco é a <strong>qualidade do movimento</strong> e a <strong>consistência</strong>. Vem treinar num ambiente onde o teu objetivo é a nossa prioridade.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Membros Ativos</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Aulas/Semana</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500m²</div>
+                                <div class="stat-label">De Área Útil</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <!-- ⚠️ EDITAR: Substitui esta imagem placeholder por uma foto real do teu espaço (recepção, sala de pesos, box) -->
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Interior do Ginásio Impact Training">
+                        <div class="badge">Aberto 7 dias</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SERVICES / MODALIDADES
+        ========================================= -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">O Que Oferecemos</span>
+                    <h2>Modalidades & Serviços</h2>
+                    <p>Tudo o que precisas num só lugar. Escolhe o teu caminho.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Card 1 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.37 3.63a9 9 0 1 1-12.73 12.73"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></div>
+                        <h3>Musculação & Hipertrofia</h3>
+                        <p>Zona de pesos livres e máquinas de última geração para ganho de massa muscular e força.</p>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                        <h3>Personal Training</h3>
+                        <p>Acompanhamento 100% individualizado. Planeamento de treino, nutrição e lifestyle.</p>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                        <h3>Aulas de Grupo</h3>
+                        <p>⚠️ EDITAR: Lista as tuas aulas (Ex: GAP, HIIT, Cycling, Yoga, Funcional, Cross Training).</p>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+                        <h3>Nutrição Desportiva</h3>
+                        <p>Consultas de nutrição adaptadas ao teu treino e objetivos (parceria/externo).</p>
+                    </article>
+                    <!-- Card 5 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12V7H5V7"/><path d="M3 5v14"/><path d="M7 12h14"/><path d="M12 12v7"/></svg></div>
+                        <h3>Fisioterapia / Recuperação</h3>
+                        <p>Prevenção de lesões e reabilitação desportiva no local (parceria/externo).</p>
+                    </article>
+                    <!-- Card 6 -->
+                    <article class="service-card">
+                        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                        <h3>Acesso Livre (Open Gym)</h3>
+                        <p>Treina no teu horário. Horário alargado para se adaptar à tua rotina.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SCHEDULE / HORÁRIOS
+        ========================================= -->
+        <section id="schedule">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Quando Estamos Abertos</span>
+                    <h2>Horário de Funcionamento</h2>
+                    <p>⚠️ EDITAR: Ajusta os horários reais do teu ginásio abaixo.</p>
+                </div>
+                <div class="schedule-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Manhã</th>
+                                <th>Tarde / Noite</th>
+                                <th>Observações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day-cell">Segunda - Sexta</td>
+                                <td>07:00 - 13:00</td>
+                                <td>16:00 - 22:00</td>
+                                <td>Horário Contínuo em Agosto?</td>
+                            </tr>
+                            <tr>
+                                <td class="day-cell">Sábado</td>
+                                <td>09:00 - 13:00</td>
+                                <td>Encerrado</td>
+                                <td>Aulas de Manhã Disponíveis</td>
+                            </tr>
+                            <tr>
+                                <td class="day-cell">Domingo</td>
+                                <td colspan="2" class="closed">Encerrado</td>
+                                <td>Descanso / Manutenção</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://wa.me/351935222311?text=Ol%C3%A1%20Impact%20Training%2C%20gostava%20de%20saber%20os%20hor%C3%A1rios%20das%20aulas%20de%20grupo%20desta%20semana." target="_blank" class="btn btn-outline">Ver Horário de Aulas (WhatsApp)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             CONTACT / MAP
+        ========================================= -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-subtitle">Visita-nos</span>
+                        <h2>Estamos em Chafé,<br>Viana do Castelo.</h2>
+
+                        <div class="info-item">
+                            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div class="info-text">
+                                <h4>Morada</h4>
+                                <address style="font-style: normal;">
+                                    Caminho do Campo de Jogos Nº 327<br>
+                                    4935-581 Chafé, Viana do Castelo
+                                </address>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Caminho+do+Campo+de+Jogos+N%C2%BA+327+4935-581+Chaf%C3%A9" target="_blank" style="font-size: 0.9rem; margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.3rem;">Abrir no Google Maps →</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                            <div class="info-text">
+                                <h4>Telefone / WhatsApp</h4>
+                                <a href="tel:+351935222311">+351 935 222 311</a>
+                                <p style="font-size: 0.85rem; margin-top: 0.25rem;">(Chamada para rede móvel nacional)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                            <div class="info-text">
+                                <h4>Redes Sociais</h4>
+                                <a href="https://www.instagram.com/impact.training_" target="_blank" rel="noopener">@impact.training_</a>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/impact.training_" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                            <a href="https://wa.me/351935222311" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg></a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Caminho+do+Campo+de+Jogos+N%C2%BA+327+4935-581+Chaf%C3%A9" target="_blank" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="map-container" title="Localização Impact Training">
+                        <!-- ⚠️ EDITAR: Se tiveres Google Maps API Key, podes usar JS API. Este embed funciona sem chave. -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.5!2d-8.8167!3d41.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24e0b7c8f8f8f%3A0x123456789abcdef!2sCaminho%20do%20Campo%20de%20Jogos%20N%C2%BA%20327%2C%204935-581%20Chaf%C3%A9!5e0!3m2!1spt-PT!2spt!4v1700000000000!5m2!1spt-PT!2spt"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">IMPACT <span>TRAINING</span></div>
+            <p class="footer-bottom">Caminho do Campo de Jogos Nº 327, 4935-581 Chafé | <a href="tel:+351935222311">935 222 311</a> | <a href="https://www.instagram.com/impact.training_">@impact.training_</a></p>
+            <p class="footer-bottom" style="font-size: 0.75rem; margin-top: 0.5rem;">© 2024 Impact Training. Todos os direitos reservados. | Desenvolvido com foco em performance.</p>
+        </div>
+    </footer>
+
+    <!-- =========================================
+         WHATSAPP FLOAT BUTTON
+    ========================================= -->
+    <div class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <a href="https://wa.me/351935222311?text=Ol%C3%A1%20Impact%20Training%2C%20vim%20pelo%20site%20e%20gostava%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="whatsapp-btn" aria-label="Abrir WhatsApp">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.466-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.472.099-.174.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+        </a>
+        <span class="whatsapp-tooltip">Fala connosco!</span>
+    </div>
+
+    <!-- =========================================
+         JAVASCRIPT (Vanilla, Leve)
+    ========================================= -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const header = document.getElementById('header');
+        const navLinksAnchors = navLinks.querySelectorAll('a');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        // Close menu on link click
+        navLinksAnchors.forEach(link => link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }));
+
+        // 2. Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        }, {
+            passive: true
+        });
+
+        // 3. Active Nav Link on Scroll (Intersection Observer)
+        const sections = document.querySelectorAll('main section[id]');
+        const observerOptions = {
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinksAnchors.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, observerOptions);
+        sections.forEach(sec => observer.observe(sec));
+
+        // 4. Smooth Scroll for Anchor Links (Fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 5. Lazy Load Images (Native loading="lazy" handles most, this is for background images if any added later)
+        // 6. Current Year in Footer (Optional)
+        // document.querySelector('.footer-bottom').innerHTML = document.querySelector('.footer-bottom').innerHTML.replace('2024', new Date().getFullYear());
+    </script>
+</body>
+
+</html>
